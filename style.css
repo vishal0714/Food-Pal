@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* CSS RESET  */
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90vw;
+  margin: auto;
+}
+
+/* Styling navbar */
+
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  padding: 20px;
+}
+#green{
+  color: rgb(91, 164, 60);
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.ham {
+  display: none;
+}
+
+.element {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.list {
+  display: flex;
+  gap: 50px;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list-item a {
+  text-decoration: none;
+  color: rgb(106, 122, 133);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+/* Styling hero section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  background: url(./Images/BG.png) no-repeat center center/cover;
+  border-radius: 20px;
+  min-height: 40vh;
+}
+
+.hero-content {
+  margin: 20px;
+  padding: 50px;
+}
+
+.hero-content h3 {
+  color: rgb(220, 88, 42);
+}
+
+.hero-content h1 {
+  color: white;
+}
+
+.hero-content span {
+  color: white;
+}
+
+.section {
+  display: flex;
+  margin: 10px;
+  padding: 14px;
+}
+
+.section > p {
+  font-size: 22px;
+}
+
+/* Styling search bar */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.search-box {
+  gap: 20px;
+  display: flex;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+}
+
+.search-box input {
+  border: none;
+  width: 100%;
+  background: transparent;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.bg-box {
+  background: rgb(80, 158, 47);
+  padding: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling Buttons */
+
+#button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#button button {
+  border: none;
+  width: 231px;
+  border-radius: 7px;
+  color: white;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#color-1 {
+  background-color: rgb(234, 170, 0);
+}
+
+#color-2 {
+  background-color: rgb(196, 214, 0);
+}
+
+#color-3 {
+  background-color: rgb(220, 88, 42);
+}
+
+/* Styling Card section */
+
+.aside {
+  display: flex;
+  gap: 5px;
+  padding: 0px 0px 140px 0px;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  width: 12%;
+}
+
+.check-box {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+/* Card section  */
+
+.text {
+  display: flex;
+  width: 88%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.images {
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  width: 29.5%;
+  max-width: 300px;
+  min-width: 200px;
+  height: fit-content;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card-contain {
+  display: flex;
+  gap: 15px;
+}
+
+.card-contain h3 {
+  color: rgb(220, 88, 42);
+  font-size: 30px;
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer styling */
+
+footer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: 2fr 1fr;
+  gap: 50px 50px;
+  padding-bottom: 50px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.col img {
+  width: 80px;
+  height: 40px;
+}
+
+.col p {
+  font-size: 20px;
+}
+
+.input {
+  display: flex;
+  gap: 5px;
+}
+
+.input input {
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input button {
+  background-color: rgb(80, 158, 47);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.col3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  grid-column: 1/5;
+}
+
+.social-madia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(42, 51, 66);
+  border-radius: 50px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.addret {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#email {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+col2 p img {
+  height: 50px;
+  width: 50px;
+}
+
+/* Utlity classes */
+
+.spacebetween {
+  justify-content: space-between;
+}
+
+.gap {
+  gap: 5px;
+}
+
+@media only screen and (max-width: 941px) {
+  .card h2,
+  .feedback,
+  .rating,
+  .element {
+    display: none;
+  }
+  #button button,
+  .text,
+  .card {
+    width: 100%;
+  }
+  .aside {
+    flex-direction: column;
+  }
+  .card {
+    justify-content: center;
+    .check-box {
+      flex-direction: row;
+    }
+  }
+  .images {
+    min-width: 200px !important;
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .col {
+    align-items: center;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .ham {
+    display: block;
+  }
+}
