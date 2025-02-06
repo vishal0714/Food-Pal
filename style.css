@@ -33,7 +33,7 @@ body {
   margin-top: 4px;
   padding: 20px;
 }
-#green{
+#green {
   color: rgb(91, 164, 60);
 }
 .logo-box {
@@ -75,7 +75,6 @@ body {
   font-size: 20px;
 }
 
-
 /* Styling hero section */
 
 .hero {
@@ -114,16 +113,23 @@ body {
   font-size: 22px;
 }
 
+.contain {
+  display: flex;
+  width: 100%;
+}
 /* Styling search bar */
 
 .search {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
 }
 
 .search-box {
   gap: 20px;
+  height: 60px;
+
   display: flex;
   width: 100%;
   background-color: rgb(243, 243, 243);
@@ -137,11 +143,15 @@ body {
 
 .search-bar {
   display: flex;
+  width: 100%;
 }
 
 .bg-box {
+  display: flex;
   background: rgb(80, 158, 47);
-  padding: 3px;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
@@ -200,55 +210,65 @@ body {
 }
 
 /* Card section  */
-
-.text {
+.card-container {
+  width: 85%;
   display: flex;
-  width: 88%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: start;
+  gap: 15px;
 }
 
-.images {
-  flex-direction: column;
-  display: flex;
-  gap: 15px;
-  width: 29.5%;
-  max-width: 300px;
+#card {
   min-width: 200px;
-  height: fit-content;
-  margin: 10px;
+  max-width: 600px;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   padding: 10px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 0px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 }
 
-.card-contain {
+.sb {
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
 }
 
-.card-contain h3 {
-  color: rgb(220, 88, 42);
-  font-size: 30px;
-}
-
-.rating {
-  display: flex;
+.form {
   gap: 10px;
-  justify-content: center;
   align-items: center;
 }
 
-.feedback {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+.form input {
+  outline: none;
+  border: none;
 }
 
+.input-box {
+  border-radius: 8px;
+  padding: 12px 16px;
+  border: 1px solid black;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 /* Footer styling */
 
 footer {
