@@ -136,4 +136,97 @@ let data = [
   },
 ];
 
-const container = document.getElementById("card-container");
+const cardinfo = document.querySelector("#cardinfo");
+const btnContainer = document.querySelectorAll("button");
+const Above = document.getElementById("Above4");
+const Below = document.getElementById("Below4");
+// SEARCH SECTION
+
+const checkBoxValue = () => {
+  let allCards = document.querySelectorAll(".rate");
+  allCards.forEach((item) => {
+    let cardPapa = item.parentElement.parentElement.parentElement;
+    console.log(cardPapa);
+    let parseRating = parseFloat(item.textContent);
+
+    if (Below.checked && Above.checked) {
+      cardPapa.style.display = "flex";
+    } else if (Below.checked && !Above.checked) {
+      if (parseRating >= 4.0) {
+        cardPapa.style.display = "none";
+      } else {
+        cardPapa.style.display = "flex";
+      }
+    } else if (!Below.checked && Above.checked) {
+      if (parseRating <= 4.0) {
+        cardPapa.style.display = "none";
+      } else {
+        cardPapa.style.display = "flex";
+      }
+    } else {
+      cardPapa.style.display = "flex";
+    }
+  });
+};
+Above.addEventListener("change", checkBoxValue);
+Below.addEventListener("change", checkBoxValue);
+// BUTTON JAVASCRIPT
+
+btnContainer[0].addEventListener("click", () => {
+  cardinfo.innerHTML = "";
+  displayCards(data);
+});
+
+btnContainer[1].addEventListener("click", () => {
+  const filteredData = data.filter((dish) => dish.type === "veg");
+  cardinfo.innerHTML = "";
+  displayCards(filteredData);
+});
+
+btnContainer[2].addEventListener("click", () => {
+  const filteredData = data.filter((dish) => dish.type == "non-veg");
+  cardinfo.innerHTML = "";
+  displayCards(filteredData);
+});
+
+// CARD JAVASCRIPT
+
+const displayCards = (filteredData) => {
+  filteredData.map((item) => {
+    let card = document.createElement("div");
+    // console.log(card);
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card1">
+                        <img
+                        height="250"
+                        width="200"
+                        src="${item.imageSrc}"
+                         id="p1">
+                    </div>
+                    <div class="card2">
+                        <p>${item.type}</p>
+                    </div>
+                    <div class="card3">
+                        <h4>${item.name}</h4>
+                        <div class="flex">
+                            <img src="./Images/Frame 28.png">
+                            <p class="rate">${parseFloat(item.rating).toFixed(
+                              1,
+                            )}</p>
+                        </div>
+                    </div>
+                    <div class="card4">
+                        <h4 class="t1">${item.time}</h4>
+                        <div class="card5">
+                            <img src="./Images/like (1).png" alt="no-img">
+                            <img src="./Images/comments (1).png" alt="no-img">
+                        </div>
+                    </div>`;
+
+    cardinfo.append(card);
+  });
+  // console.log(cardinfo);
+};
+
+window.onload = displayCards(data);
